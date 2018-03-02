@@ -1,5 +1,7 @@
 package CucumberFramework.stepFiles;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,7 +19,9 @@ public class Login {
 	public void setup () {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\teoa\\Desktop\\workspace\\CucumberFramework\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
 		this.driver = new ChromeDriver();
-		
+		this.driver.manage().window().maximize();
+		this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
 	
 	}
 	
