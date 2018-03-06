@@ -17,7 +17,7 @@ public class Login {
 	
 	@Before
 	public void setup () {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\teoa\\Desktop\\workspace\\CucumberFramework\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/macbook/Dev/CucumberFramework/src/test/java/CucumberFramework/resources/chromedriver_mac");
 		this.driver = new ChromeDriver();
 		this.driver.manage().window().maximize();
 		this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
