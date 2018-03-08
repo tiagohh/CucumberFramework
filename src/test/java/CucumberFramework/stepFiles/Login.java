@@ -2,9 +2,11 @@ package CucumberFramework.stepFiles;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -25,14 +27,25 @@ public class Login {
 	
 	}
 	
+//	@After
+//	public void tearDown() throws InterruptedException {
+//		Thread.sleep(3000);
+//		this.driver.manage().deleteAllCookies();
+//		this.driver.quit();
+//		this.driver = null;
+//		
+//	}
+	
 	@Given("^User navigates to stackoverflow website$")
 	public void user_navigates_to_stackoverflow_website() throws Throwable {
-		System.out.println("Test");
+		driver.get("https://pt.stackoverflow.com/");
+		
 	}
 
 	@And("^User clicks on the login button on homepage$")
 	public void user_clicks_on_the_login_button_on_homepage() throws Throwable {
-		System.out.println("Test1");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Log-in']")).click();
 	}
 
 	@And("^User enters a valid username$")
