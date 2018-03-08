@@ -50,9 +50,9 @@ public class Login {
 
 	@And("^User enters a valid username$")
 	public void user_enters_a_valid_username() throws Throwable {
-		//need to fix how I am finding this object
-		driver.findElement(By.xpath("html/body/div[3]/div/div[2]/div[2]/div[1]/div[1]")).click();
 		
+		driver.findElement(By.className("google-login")).click();
+				
 
 	}
 
