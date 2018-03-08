@@ -27,7 +27,7 @@ public class Login {
 	
 	@Given("^User navigates to stackoverflow website$")
 	public void user_navigates_to_stackoverflow_website() throws Throwable {
-		System.out.println("Test");
+		driver.get("https://stackoverflow.com");
 	}
 
 	@And("^User clicks on the login button on homepage$")
