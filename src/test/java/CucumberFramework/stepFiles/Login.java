@@ -27,14 +27,14 @@ public class Login {
 	
 	}
 	
-//	@After
-//	public void tearDown() throws InterruptedException {
-//		Thread.sleep(3000);
-//		this.driver.manage().deleteAllCookies();
-//		this.driver.quit();
-//		this.driver = null;
-//		
-//	}
+	@After
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(3000);
+		this.driver.manage().deleteAllCookies();
+		this.driver.quit();
+		this.driver = null;
+		
+	}
 	
 	@Given("^User navigates to stackoverflow website$")
 	public void user_navigates_to_stackoverflow_website() throws Throwable {
@@ -50,7 +50,9 @@ public class Login {
 
 	@And("^User enters a valid username$")
 	public void user_enters_a_valid_username() throws Throwable {
-		System.out.println("Test2");
+		//need to fix how I am finding this object
+		driver.findElement(By.xpath("html/body/div[3]/div/div[2]/div[2]/div[1]/div[1]")).click();
+		
 
 	}
 
