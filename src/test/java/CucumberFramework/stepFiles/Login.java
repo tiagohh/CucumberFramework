@@ -24,7 +24,7 @@ public class Login {
 		this.driver.manage().window().maximize();
 		this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		this.driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);
-	
+	//for mac System.setProperty("webdriver.chrome.driver", "/Users/macbook/Dev/CucumberFramework/src/test/java/CucumberFramework/resources/chromedriver_mac");
 	}
 	
 	@After
